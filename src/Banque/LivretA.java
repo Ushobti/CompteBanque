@@ -21,5 +21,31 @@ public class LivretA extends Compte {
 		}		
 	}
 	
+	@Override
+	public float virer(float somme, Compte compteDestination) {
+		this.retirer(somme);
+		compteDestination.deposer(somme);
+		return somme;		
+	}
+	
+	public static void main(String[] args) {
+		LivretA LivretA1 = new LivretA();
+		LivretA LivretA2 = new LivretA();
+		
+		LivretA1.deposer(1000);
+		LivretA2.retirer(200);
+		
+		System.out.println(LivretA2);
+		System.out.println(LivretA1);
+		
+		LivretA1.virer(300,LivretA2);		
+
+		System.out.println(LivretA2);
+		System.out.println(LivretA1);
+		
+		System.out.println(LivretA2.retirer(400));
+		
+		System.out.println(LivretA2);
+	}
 	
 }
