@@ -23,5 +23,11 @@ public class Compte {
 		compteDestination.deposer(somme);
 		return somme;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "« Solde : »" + Solde ;
+	}
 
 }
