@@ -29,5 +29,22 @@ public class Compte {
 	{
 		return "« Solde : »" + Solde ;
 	}
+	
+	public static void main(String[] args) {
+		Compte Compte1 = new Compte();
+		Compte Compte2 = new Compte();
+		
+		Compte1.deposer(1000);
+		Compte2.retirer(200);
+		
+		System.out.println(Compte2);
+		System.out.println(Compte1);
+		
+		Compte1.virer(300,Compte2);		
+
+		System.out.println(Compte2);
+		System.out.println(Compte1);
+
+	}
 
 }
